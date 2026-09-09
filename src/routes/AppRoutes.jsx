@@ -43,11 +43,14 @@ import AdminLayout from "../layouts/AdminLayout";
 // Route protection
 import ProtectedRoute from "./ProtectedRoute";
 import RoleRoute from "./RoleRoute";
+import ScrollToTop from "../components/common/ScrollToTop";
 
 
 function AppRoutes() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
 
       {/* PUBLIC ROUTES*/}
 
@@ -238,7 +241,8 @@ function AppRoutes() {
         element={<Home />}
       />
 
-    </Routes>
+      </Routes>
+    </>
   );
 }
 

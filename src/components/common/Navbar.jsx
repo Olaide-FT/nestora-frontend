@@ -240,7 +240,7 @@ const navItems = [
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={isDark ? "text-white md:hidden" : "text-primary md:hidden"}
+            className={isDark ? "text-white md:hidden" : "#e5ebe9 md:hidden"}
             aria-label="Toggle navigation"
           >
             {mobileOpen ? (
@@ -260,7 +260,7 @@ const navItems = [
                   key={item.path}
                   to={item.path}
                   onClick={() => setMobileOpen(false)}
-                  className={`font-body text-sm font-semibold ${isDark ? "text-white" : "text-primary"}`}
+                  className={`font-body text-sm font-semibold ${isDark ? "text-white" : "#e5ebe9"}`}
                 >
                   {item.label}
                 </NavLink>
@@ -272,7 +272,7 @@ const navItems = [
                   <>
                     <Link
                       to="/login"
-                      className={`rounded-lg border px-5 py-3 text-center font-body text-sm font-semibold ${mutedButtonClass}`}
+                      className={`rounded-lg border px-5 py-3 text-center font-body text-sm font-semibold  ${mutedButtonClass}`}
                     >
                       Sign In
                     </Link>

@@ -95,11 +95,11 @@ function PropertyCard({ property, initialFavorite = false }) {
     <article className="relative overflow-hidden rounded-xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
       <Link to={`/properties/${propertyId}`} className="group block">
       <div className="relative aspect-[4/3] overflow-hidden">
-        <a href="#"><img
+        <img
           src={propertyImage}
           alt={title || "Property"}
           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-        /></a>
+        />
 
         <div className="absolute left-4 top-4">
           <span className="rounded-md bg-primary px-3 py-1.5 font-body text-xs font-semibold uppercase tracking-wide text-white">

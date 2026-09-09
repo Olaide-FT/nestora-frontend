@@ -58,13 +58,8 @@ function Register() {
 
       await register(payload);
 
-      setSuccess(
-        "Account created successfully. Please check your email for the OTP code."
-      );
-
-      navigate("/verify-email", {
-        state: { email: payload.email },
-      });
+      setSuccess("Account created successfully. You can now log in.");
+      navigate("/login");
     } catch (error) {
       setError(
         error.response?.data?.message ||
