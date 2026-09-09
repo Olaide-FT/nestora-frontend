@@ -4,6 +4,7 @@ import { Building2, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import OwnerPropertyCard from "../../pages/owner/OwnerPropertyCard";
+import useBodyScrollLock from "../../utils/useBodyScrollLock";
 
 import {
   getMyProperties,
@@ -26,6 +27,8 @@ function MyProperties() {
     propertyId: null,
     title: "",
   });
+
+  useBodyScrollLock(deleteModal.open);
 
   useEffect(() => {
     fetchProperties();

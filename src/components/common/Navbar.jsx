@@ -125,7 +125,7 @@ const navItems = [
   };
 
   return (
-    <header className="absolute left-0 right-0 top-0 z-50">
+    <header className="fixed left-0 right-0 top-0 z-50">
       <div className="mx-auto max-w-7xl px-5 py-5 sm:px-8 lg:px-10">
         <nav className={`flex items-center justify-between rounded-2xl px-4 py-3 backdrop-blur-2xl ${surfaceClass}`}>
 

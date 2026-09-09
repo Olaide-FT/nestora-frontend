@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 
 import ApprovalBadge from "../../pages/admin/ApprovalBadge";
+import useBodyScrollLock from "../../utils/useBodyScrollLock";
 
 import {
   getAllAdminProperties,
@@ -29,6 +30,8 @@ function ManageProperties() {
     propertyId: null,
     title: "",
   });
+
+  useBodyScrollLock(deleteModal.open);
 
   useEffect(() => {
     fetchProperties();

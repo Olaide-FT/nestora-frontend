@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { CheckCircle, XCircle, Info, AlertTriangle, X } from "lucide-react";
+import useBodyScrollLock from "../../utils/useBodyScrollLock";
 
 const ICONS = {
   success: <CheckCircle size={24} className="text-green-500" />,
@@ -31,6 +32,8 @@ function NotificationModal({
   onClose,
   autoClose = 0,
 }) {
+  useBodyScrollLock(open);
+
   // Auto-close timer
   useEffect(() => {
     if (!open || !autoClose) return;

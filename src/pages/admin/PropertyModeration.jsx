@@ -14,6 +14,7 @@ import {
 
 import ApprovalBadge from "../../pages/admin/ApprovalBadge";
 import { useNotification } from "../../context/NotificationContext";
+import useBodyScrollLock from "../../utils/useBodyScrollLock";
 
 function PropertyModeration() {
   const { success } = useNotification();
@@ -28,6 +29,8 @@ function PropertyModeration() {
     propertyId: null,
     reason: "",
   });
+
+  useBodyScrollLock(rejectModal.open);
 
   const [error, setError] = useState("");
 
